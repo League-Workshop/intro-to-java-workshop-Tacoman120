@@ -15,18 +15,22 @@ public class FlamingNinjaStar {
 		// Set the robot speed to 100
 		geoff.setSpeed(100);
 		// Set the robot window size to 800 x 800
-		
+	
 		//  COUNT. Make an int variable to count how many times the loop has repeated
 		//         Set its start value to zero.
 		int squaresDrawn = 0;
 	       //  LOOP. Start a while loop to repeat all of the code below ONE time (we will change this later)
-		while(squaresDrawn<10) {
+		while(squaresDrawn<25) {
+		
 			   // TURN RIGHT     Turn the robot 1/8 of a circle (hint: 360 degrees will turn a full circle)
 			geoff.turn(45);
 			   // MOVE           Move the robot 64 pixels
 		geoff.move(64);
 			   // TURN LEFT      Turn the robot 40 degrees to the LEFT. (Negative numbers will turn the robot counter-clockwise.)
 			geoff.turn(-40);
+			// COLOR  Change the Robot's pen color so that the flame is a different color to the rest of the star.
+			//        Run the program again. Check the second picture in the recipe.
+	geoff.setPenColor(255,0,0);
 			   // DRAW FLAME     Move the robot the distance in the variable flameSize
 			geoff.move(flameSize);
 				//               Turn the robot 170 degrees
@@ -35,6 +39,8 @@ public class FlamingNinjaStar {
 			geoff.move(flameSize);
 			   // TURN RIGHT     Turn the robot 64 degrees to the right
 			geoff.turn(64);
+			//change color to black
+			geoff.setPenColor(0,0,0);
 				// MOVE         Move the robot the distance in the variable baseSize
 		geoff.move(baseSize);
 				//  INCREASE COUNT. Increase the count by 1
@@ -46,7 +52,7 @@ public class FlamingNinjaStar {
 		
 		// COLOR  Change the Robot's pen color so that the flame is a different color to the rest of the star.
 		//        Run the program again. Check the second picture in the recipe.
-
+geoff.setPenColor(255,0,0);
 		// LOOP   When you have one arm looking right, change your loop to repeat 25 times and run the program.
 		
 	}
