@@ -9,7 +9,7 @@ import org.jointheleague.graphical.robot.Robot;
 
 public class StarShow {
 	
-	// This code creates a Batman Robot
+	// This code creates a Robot
 	Robot batman = new Robot("batman");
 	
 	void makeStars() {
@@ -63,21 +63,21 @@ public class StarShow {
 
 	private void drawStar(int starSize) {
 		// Put the robot's pen down
-
+batman.penDown();
     	// COUNT. Create an int variable that will count how many lines of the star we have drawn.
     	//        The start value will be zero because no lines have yet been drawn. Use this code:
 		  /**     int lines = 0;    **/
-
+int lines = 0;
 		// LOOP: Start a while loop to repeat the following code until 5 lines have been drawn
-
+while(lines<5) {
 				// MOVE the robot the distance of the starSize variable
-
+batman.move(starSize);
 				// TURN the robot 144 degrees
-
+batman.turn(144);
 				// COUNT. Add one to the number of lines the robot has drawn      lines+=1;
-
+lines+=1;
     	// End the while loop here
-
+}
 	}
 	
 	public static void main(String[] args) {
