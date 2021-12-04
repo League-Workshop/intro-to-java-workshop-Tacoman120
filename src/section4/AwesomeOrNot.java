@@ -23,7 +23,7 @@ if (joe==0) {
 }else if (joe==2) {
 	JOptionPane.showMessageDialog(null, "that is BORING");
 }else if (joe==3) {
-	JOptionPane.showMessageDialog(null, "you are a NOOB");
+	JOptionPane.showMessageDialog(null, "that is garbedge");
 }
 	// -- tell the user whatever they entered is awesome!
 
