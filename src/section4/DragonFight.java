@@ -31,6 +31,9 @@ public class DragonFight {
 		if (Jeff.equals("yell")) {
 			dragonDamage = new Random().nextInt(11);
 			dragonHealth-=dragonDamage;
+		}else if (Jeff.equals("kick")) {
+			dragonDamage = new Random().nextInt(36);
+			dragonHealth-=dragonDamage;
 		}
 			//-- Find a random number between 0 and 10 and store it in dragonDamage
 			
@@ -45,18 +48,18 @@ public class DragonFight {
 			
 		
 		// 11.  Find a random number between 0 and 35 and store it in playerDamage
-		playerDamage = new Random().nextInt(11);
+		playerDamage = new Random().nextInt(36);
 		// 12. Subtract this number from the player's health
 		playerHealth-=playerDamage;
 		
 		
 		// 13. If the user's health is less than or equal to 0
-		if (playerHealth==0) {
+		if (playerHealth<=0) {
 			JOptionPane.showMessageDialog(null, "GAME OVER");
-		}else if (dragonHealth==0) {
+		}else if (dragonHealth<=0) {
 			JOptionPane.showMessageDialog(null, "Dragon is defeated and your bank loan is aproved");
 		}else {
-			
+			JOptionPane.showMessageDialog(null, "Dragon Health = "+dragonHealth+". Player Health ="+playerHealth);
 		}
 			//-- Tell the user that they lost
 			
